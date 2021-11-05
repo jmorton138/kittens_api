@@ -1,0 +1,12 @@
+<h1>Kittens</h1>
+<% @kittens.each do |kitten| %>
+    <div>
+    <%= kitten.name %>
+    </div>
+    <div>
+        age: <%= kitten.age %>
+    </div>
+    <div>
+    <%= link_to 'Delete this kitten', kitten_path(kitten), method: :delete %>
+    </div>
+<% end %>

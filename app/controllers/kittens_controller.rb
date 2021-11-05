@@ -29,7 +29,7 @@ class KittensController < ApplicationController
     def update
         @kitten = Kitten.find(params[:id])
 
-        if @kitten.updat(kitten_params)
+        if @kitten.update(kitten_params)
             redirect_to kitten_path(@kitten.id)
         else
             render :edit
@@ -48,4 +48,5 @@ class KittensController < ApplicationController
 
     def kitten_params
         params.require(:kitten).permit(:name, :age, :cuteness, :softeness)
+    end
 end

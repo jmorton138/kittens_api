@@ -1,0 +1,7 @@
+<%= form_with model: @kitten do |form| %>
+    <%= form.text_field :name %>
+    <%= form.number_field :age %>
+    <%= form.number_field :cuteness %>
+    <%= form.number_field :softness %>
+    <%= submit_tag("Submit") %>
+<% end %>
